@@ -57,10 +57,10 @@ const Register = () => {
       <div className="container form-component register-form">
         <h2>Sign Up</h2>
         <p>Please Sign Up To Continue</p>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
           voluptas expedita itaque ex, totam ad quod error?
-        </p>
+        </p> */}
         <form onSubmit={handleRegistration}>
           <div>
             <input
@@ -126,7 +126,7 @@ const Register = () => {
           >
             <p style={{ marginBottom: 0 }}>Already Registered?</p>
             <Link
-              to={"/signin"}
+              to={"/login"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Login Now

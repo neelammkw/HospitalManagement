@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "http://localhost:3000/api/v1/user/login",
+          "https://hospitalmanagement-m7hq.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Admin" },
           {
             withCredentials: true,
@@ -35,6 +35,7 @@ const Login = () => {
         });
     } catch (error) {
       toast.error(error.response.data.message);
+      console.log(error)
     }
   };
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +7,14 @@
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
-  background: #e5e5e5;
+  background: radial-gradient(circle, rgb(55, 87, 247) 10%, rgba(54, 229, 223, 0.952) 60%, rgb(252, 92, 250) 99%);
+
+
+
 }
+
 .btn {
   padding: 7px 20px;
   border-radius: 12px;
@@ -16,107 +22,131 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 .white-btn {
   background: #fff;
   color: #111;
 }
+
 .purple-btn {
   background: #9083d5;
   color: #fff;
 }
+
 p,
 span,
 a {
   font-size: 20px;
 }
+
 h1 {
   font-size: 36px;
   font-weight: 900;
 }
+
 h1 {
   font-size: 36px;
   font-weight: 900;
 }
+
 h2 {
   font-size: 32px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 28px;
   font-weight: 700;
 }
+
 h4 {
   font-size: 24px;
   font-weight: 900;
 }
+
 h5,
 h6 {
   font-size: 24px;
   font-weight: 700;
 }
+
 @media (max-width: 1186px) {
   h1 {
     font-size: 32px;
     font-weight: 900;
   }
+
   h2 {
     font-size: 30px;
     font-weight: 600;
   }
 }
+
 .container {
   padding: 0 100px;
 }
+
 @media (max-width: 700px) {
   .container {
     padding: 0 20px;
   }
 }
+
 .form-container {
   padding: 0 200px;
 }
+
 @media (max-width: 700px) {
   .form-container {
     padding: 0 20px;
   }
 }
+
 .hero {
   display: flex;
   gap: 30px;
-  padding-top: 130px;
-  padding-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 110px;
   position: relative;
 }
+
 .hero .banner {
   flex: 1;
 }
+
 .hero .banner h1,
 .hero .banner p {
   max-width: 650px;
 }
+
 .hero .banner h1 {
   letter-spacing: 2px;
+  margin-top: 80px;
   word-spacing: 5px;
   font-size: 40px;
 }
+
 .hero .banner p {
   color: #111;
   letter-spacing: 2px;
 }
+
 .hero .banner span {
   position: absolute;
   width: 700px;
   /* height: 800px; */
-  right: -20px; 
-  top: 80px; 
+  right: -20px;
+  top: 80px;
   z-index: -1;
 }
+
 .hero .banner:first-child {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 50px;
 }
+
 .hero .banner:last-child {
   display: flex;
   justify-content: center;
@@ -136,19 +166,23 @@ h6 {
   0% {
     transform: translateY(0) scaleX(-1);
   }
+
   100% {
     transform: translateY(30px) scaleX(-1);
-    
+
   }
 }
+
 @media (max-width: 1186px) {
   .hero .banner span {
     right: -400px;
   }
+
   .hero .banner h1 {
     font-size: 32px;
   }
 }
+
 @media (max-width: 1085px) {
   .hero .banner span {
     right: 0px;
@@ -157,48 +191,69 @@ h6 {
 
   }
 }
+
 @media (max-width: 925px) {
   .hero {
     flex-direction: column;
   }
+
   @media (max-width: 700px) {
     .hero {
       padding-bottom: 10px;
-    
+
     }
+
     .hero .banner img {
-      width: 600px;
+      width: 450px;
+      right: -10px;
+      /* top: 440px; */
+    }
+
+    .hero .banner span {
+      padding-top:180px;
+      right: -210px;
+      /* padding-bottom: 20px; */
+    
+      /* width: 650px; */
+
     }
   }
 }
+
 .form-component {
   padding-top: 40px;
   padding-bottom: 60px;
 }
+
 .form-component h2 {
-  color: gray;
+  color: rgb(48, 47, 47);
   letter-spacing: 4px;
   margin-bottom: 30px;
 }
+
 .form-component h4 {
-  color: gray;
+  color: rgb(50, 48, 48);
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 .form-component p {
   max-width: 750px;
-  color: gray;
+  color: rgb(30, 29, 29);
   margin-bottom: 20px;
 }
+
 .form-component form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .form-component form div {
   display: flex;
   gap: 30px;
 }
+
 .form-component form input,
 .form-component form select,
 .form-component form textarea {
@@ -207,7 +262,9 @@ h6 {
   padding: 10px 10px 10px 40px;
   border-radius: 7px;
   border: 1px solid gray;
+
 }
+
 .form-component button {
   padding: 10px 35px;
   color: #fff;
@@ -217,57 +274,76 @@ h6 {
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #d26c9f, #1970ceca);
+  background: linear-gradient(170deg, #2b0d96, #048798ca);
 }
+
 .form-component .wrapper {
   display: flex;
   gap: 50px;
 }
+
 .form-component .wrapper .banner {
   flex: 1;
 }
+
 .form-component .wrapper .banner:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .form-component .wrapper .banner:last-child img {
   max-width: 450px;
 }
+
 .login-form {
   margin: 100px auto 20px auto;
   max-width: 800px;
   text-align: center;
 }
+
 .register-form {
-  padding: 0 200px;
+  padding: 40px 200px;
   max-width: 1200px;
   margin: 100px auto 20px auto;
 }
+
 .login-form h2 {
   color: #000;
 }
+
 .register-form h2 {
   color: #000;
+  text-align: center;
 }
+.register-form p {
+  color: #000;
+  text-align: center;
+}
+
 @media (max-width: 1110px) {
   .appointment-form form div:nth-child(4) {
     flex-direction: column;
   }
+
   .appointment-form form div:nth-child(5) {
     flex-direction: column;
   }
 }
+
 @media (max-width: 888px) {
   .form-component {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .form-component form div {
     flex-direction: column;
   }
 }
+
 @media (max-width: 667px) {
+
   .form-component form input,
   .form-component form select,
   .form-component form textarea {
@@ -275,51 +351,61 @@ h6 {
     padding: 10px;
   }
 }
+
 .biography {
   display: flex;
   gap: 20px;
   padding-bottom: 40px;
 }
+
 .biography-about {
   display: flex;
   /* gap: 20px; */
-  padding-top: 0px;
+  /* padding-top: -20px; */
   padding-bottom: 40px;
   /* width: 50px; */
 }
+
 .biography .banner:first-child {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .biography .banner:last-child {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .biography .banner h3 {
   font-weight: 600;
   letter-spacing: 3px;
 }
+
 .biography .banner p:first-child {
   font-size: 24px;
   letter-spacing: 2px;
 }
+
 @media (max-width: 925px) {
   .biography {
     flex-direction: column-reverse;
   }
 }
+
 .message-form {
   position: relative;
 }
+
 .message-form h2 {
   text-align: center;
   color: #000;
   position: relative;
 }
+
 .message-form img {
   position: absolute;
   top: 0;
@@ -327,6 +413,7 @@ h6 {
   height: 600px;
   z-index: -1;
 }
+
 @media (max-width: 700px) {
   .message-form img {
     right: -35%;
@@ -334,42 +421,53 @@ h6 {
     top: 10%;
   }
 }
+
 footer {
   padding-bottom: 30px !important;
 }
+
 footer hr {
   margin-bottom: 30px;
 }
+
 footer .content {
   display: flex;
   gap: 20px;
 }
+
 footer .content div {
   flex: 1;
 }
+
 footer .content div:nth-child(3) {
   flex: 2;
 }
+
 footer .content div h4 {
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 footer .content div ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 footer .content div ul a {
-  color: gray;
+  color: rgb(54, 52, 52);
   text-decoration: none;
 }
+
 footer .content div ul a:hover {
   color: #8570ed;
   transition: 0.3s;
 }
+
 footer .content div ul li span {
-  color: gray;
+  color: rgb(39, 37, 37);
 }
+
 footer .content div ul li span:first-child {
   width: 180px;
   display: inline-block;
@@ -382,14 +480,17 @@ footer .content div:last-child div {
   margin-bottom: 10px;
 
 }
+
 footer .content div:last-child div svg {
   font-size: 24px;
 }
+
 @media (max-width: 1135px) {
   footer .content {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   footer .content div,
   footer .content div:nth-child(3) {
     flex: none;
@@ -397,15 +498,18 @@ footer .content div:last-child div svg {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 900px) {
   footer {
     padding-bottom: 0 !important;
   }
+
   footer .content div,
   footer .content div:nth-child(3) {
     width: 100%;
   }
 }
+
 @media (max-width: 390px) {
   footer .content div:nth-child(3) ul li {
     display: flex;
@@ -414,13 +518,16 @@ footer .content div:last-child div svg {
 }
 
 .departments {
-  padding-top: 30px;
-  padding-bottom: 50px;
+  /* padding-top: 10px; */
+  padding-bottom: 40px;
+  /* color: black; */
 }
+
 .departments h2 {
-  color: gray;
+  color: rgb(23, 23, 23);
   margin-bottom: 30px;
 }
+
 .card {
   position: relative;
   border-radius: 8px;
@@ -435,6 +542,7 @@ footer .content div:last-child div svg {
   margin: 0 10px;
   text-decoration: none;
 }
+
 .card img {
   position: absolute;
   width: 100%;
@@ -443,6 +551,7 @@ footer .content div:last-child div svg {
   top: 0;
   left: 0;
 }
+
 .card .depart-name {
   margin-bottom: 30px;
   background: #e5e5e5;
@@ -472,24 +581,29 @@ nav {
   padding-bottom: 20px !important;
   z-index: 2;
 }
+
 nav .logo {
   flex: 1;
   display: flex;
   align-items: center;
   font-size: 2rem;
 }
+
 nav .navLinks {
   flex: 2;
 }
+
 nav .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav .navLinks .links {
   display: flex;
   gap: 25px;
 }
+
 nav .navLinks .links a {
   text-decoration: none;
   color: #222;
@@ -497,11 +611,15 @@ nav .navLinks .links a {
   font-weight: 600;
   letter-spacing: 1.4px;
 }
+
 nav .navLinks .links a:hover {
-  color: #000;
+  color: #272b5d;
   transition: 0.3s;
   cursor: pointer;
+  text-decoration: underline;
+  font-size: 21px;
 }
+
 nav .btn {
   padding: 8px 20px;
   color: #e5e5e5;
@@ -512,24 +630,30 @@ nav .btn {
   font-weight: 600;
   z-index: 2;
 }
+
 nav .logoutBtn {
   background: linear-gradient(135deg, black, rgb(49, 49, 49));
 }
+
 nav .loginBtn {
   background: linear-gradient(135deg, black, rgb(49, 49, 49));
 }
+
 nav .hamburger {
   display: none;
 }
+
 nav svg {
   font-size: 1.75rem;
 }
+
 @media (max-width: 1520px) {
   nav {
     min-width: 100%;
     padding: 25px 20px 40px 20px;
   }
 }
+
 @media (max-width: 1100px) {
   nav {
     background: #ffffffbf;
@@ -537,9 +661,11 @@ nav svg {
     top: 0;
     left: 0;
   }
+
   nav .hamburger {
     display: flex;
   }
+
   nav .navLinks {
     display: flex;
     flex-direction: column;
@@ -552,8 +678,9 @@ nav svg {
     height: 100%;
     width: 400px;
     background: #ffffffbf;
-    top: 79px;
+    top: 99px;
   }
+
   nav .showmenu {
     display: flex;
     flex-direction: column;
@@ -566,24 +693,29 @@ nav svg {
     width: 400px;
     height: 100%;
     background: #ffffffbf;
-    top: 79px;
+    top: 99px;
   }
+
   nav .navLinks .links {
     flex-direction: column;
     text-align: center;
   }
+
   nav .navLinks .links a {
     font-weight: 700;
   }
+
   nav .logoutBtn {
     margin-top: 20px;
   }
 }
+
 @media (max-width: 800px) {
   nav .showmenu {
     width: 96vw;
   }
 }
+
 @media (max-width: 650px) {
   nav .showmenu {
     margin: 0;
@@ -591,10 +723,12 @@ nav svg {
     border-radius: 0;
   }
 }
+
 @media (max-width: 555px) {
   nav {
     background: #fff;
   }
+
   nav .navLinks {
     background: #fff;
     width: 100%;
@@ -606,14 +740,17 @@ input[type="date"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+
 input[type="time"]:before {
   content: attr(placeholder);
   color: #444;
   margin-right: 0.5em;
 }
-.logo-img{
+
+.logo-img {
   width: 200px;
 }
-footer .logo-img{
+
+footer .logo-img {
   width: 100%;
 }

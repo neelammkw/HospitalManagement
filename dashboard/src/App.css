@@ -7,7 +7,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #3939d9f2;
+  background: #5d1bc6da;
 }
 .container {
   padding: 0 100px;
@@ -19,7 +19,7 @@ body {
 }
 .page {
   margin-left: 120px;
-  background: #f6e0b2;
+  background: radial-gradient(circle, rgb(55, 87, 247) 10%, rgba(54, 229, 223, 0.952) 60%, rgb(252, 92, 250) 99%);
   padding: 40px;
   height: 100vh;
   border-top-left-radius: 50px;
@@ -50,7 +50,8 @@ body {
   padding-top: 40px;
   padding-bottom: 60px;
   min-height: 100vh;
-  background: #e5e5e5;
+  /* background: radial-gradient(circle, rgb(55, 87, 247) 10%, rgba(54, 229, 223, 0.952) 60%, rgb(252, 92, 250) 99%); */
+
 
   display: flex;
   justify-content: center;
@@ -58,18 +59,18 @@ body {
   align-items: center;
 }
 .form-component h2 {
-  color: gray;
+  color: rgb(50, 44, 44);
   letter-spacing: 4px;
   margin-bottom: 30px;
 }
 .form-component h4 {
-  color: gray;
+  color: rgb(46, 41, 41);
   font-weight: 700;
   margin-bottom: 20px;
 }
 .form-component p {
   max-width: 750px;
-  color: gray;
+  color: rgb(41, 39, 39);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -110,7 +111,7 @@ body {
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #9083d5, #271776ca);
+  background: linear-gradient(170deg, #2b0d96, #048798ca);
 }
 .form-component .wrapper {
   display: flex;
@@ -170,7 +171,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 20px;
-  background: #b5b5ff;
+  background: #ef74f1;
   padding: 20px 20px 0 10px;
 }
 .dashboard .banner:first-child .firstBox img {
