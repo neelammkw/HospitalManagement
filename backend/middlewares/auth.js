@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 export const isAdminAuthenticated = catchAsyncErrors(
   async (req, res, next) => {
     const token = req.cookies.adminToken;
+    console.log(token)
     if (!token) {
       return next(
         new ErrorHandler("Dashboard User is not authenticated!", 400)
@@ -27,6 +28,7 @@ export const isAdminAuthenticated = catchAsyncErrors(
 export const isPatientAuthenticated = catchAsyncErrors(
   async (req, res, next) => {
     const token = req.cookies.patientToken;
+    console.log(token);
     if (!token) {
       return next(new ErrorHandler("User is not authenticated!", 400));
     }

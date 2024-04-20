@@ -39,6 +39,7 @@ const Dashboard = () => {
         )
       );
       toast.success(data.message);
+      console.log(data);
     } catch (error) {
       toast.error(error.response.data.message);
     }

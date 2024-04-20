@@ -28,9 +28,11 @@ const App = () => {
         );
         setIsAuthenticated(true);
         setAdmin(response.data.user);
+        console.log(data);
       } catch (error) {
         setIsAuthenticated(false);
         setAdmin({});
+        console.log(error);
       }
     };
     fetchUser();
