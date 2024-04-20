@@ -13,12 +13,20 @@ const app = express();
 config({ path: "./config/config.env" });
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://hospital-management-admin.netlify.app');
+  const allowedOrigins = ['https://hospital-management-admin.netlify.app', 'https://hospital-management-patient.netlify.app'];
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Credentials', 'true'); // Set the value to true
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
 });
+
+
 
 
 
