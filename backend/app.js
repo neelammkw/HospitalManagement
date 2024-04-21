@@ -33,17 +33,16 @@ app.use((req, res, next) => {
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(
-  fileUpload({
+  fileupload({
     useTempFiles: true,
     tempFileDir: "/tmp/",
   })
 );
+
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
-app.use("/api/v1/appointment", appointmentRouter);
-
+app.use("/api/v1/appointment", appoinmentRouter);
 dbConnection();
 
 app.use(errorMiddleware);

@@ -1,9 +1,7 @@
 import { User } from "../models/userSchema.js";
 import { catchAsyncErrors } from "./catchAsyncErrors.js";
 import ErrorHandler from "./error.js";
-
-import generateToken from './generateToken';
-import jwt from "../utils/jwtToken.js";
+import jwt from "jsonwebtoken";
 
 // Middleware to authenticate dashboard users
 export const isAdminAuthenticated = catchAsyncErrors(
