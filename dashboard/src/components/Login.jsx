@@ -27,6 +27,8 @@ const Login = () => {
         )
         .then((res) => {
           toast.success(res.data.message);
+          localStorage.setItem("token", res.data.token);
+          console.log("user", data)
           setIsAuthenticated(true);
           navigateTo("/");
           setEmail("");
