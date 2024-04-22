@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Navigate } from "react-router-dom";
@@ -30,9 +30,9 @@ const Doctors = () => {
       <h1>DOCTORS</h1>
       <div className="banner">
         {doctors && doctors.length > 0 ? (
-          doctors.map((element) => {
+          doctors.map((element, index ) => {
             return (
-              <div className="card">
+              <div className="card" key={index}>
                 <img
                   src={element.docAvatar && element.docAvatar.url}
                   alt="doctor avatar"
