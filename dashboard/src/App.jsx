@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import  { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
@@ -14,8 +14,10 @@ import AddNewAdmin from "./components/AddNewAdmin";
 import "./App.css";
 
 const App = () => {
-  const { isAuthenticated, setIsAuthenticated, admin, setAdmin } =
-    useContext(Context);
+  // Destructure admin from the Context object, even if it's not used
+const { isAuthenticated, setIsAuthenticated, setAdmin } =
+useContext(Context);
+
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -28,7 +30,6 @@ const App = () => {
         );
         setIsAuthenticated(true);
         setAdmin(response.data.user);
-        console.log(data);
       } catch (error) {
         setIsAuthenticated(false);
         setAdmin({});
@@ -36,7 +37,7 @@ const App = () => {
       }
     };
     fetchUser();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, setAdmin, setIsAuthenticated]);
 
   return (
     <Router>
