@@ -28,7 +28,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `https://hospitalmanagement-m7hq.onrender.com/v1/appointment/update/${appointmentId}`,
+        `https://hospitalmanagement-m7hq.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
