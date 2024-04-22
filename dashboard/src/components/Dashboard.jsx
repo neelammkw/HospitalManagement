@@ -1,4 +1,4 @@
-import  { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../main";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
@@ -8,6 +8,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
+  const { isAuthenticated, admin } = useContext(Context);
 
   useEffect(() => {
     const fetchAppointments = async () => {
@@ -22,7 +23,7 @@ const Dashboard = () => {
       }
     };
     fetchAppointments();
-  }, []);
+  }, []); // Empty dependency array for initial render only
 
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
@@ -44,7 +45,6 @@ const Dashboard = () => {
     }
   };
 
-  const { isAuthenticated, admin } = useContext(Context);
   if (!isAuthenticated) {
     return <Navigate to={"/login"} />;
   }
