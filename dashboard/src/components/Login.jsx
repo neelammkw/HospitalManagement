@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Context } from "../main";
@@ -28,7 +28,7 @@ const Login = () => {
         .then((res) => {
           toast.success(res.data.message);
           localStorage.setItem("token", res.data.token);
-          console.log("user", data)
+          // console.log("user", data)
           setIsAuthenticated(true);
           navigateTo("/");
           setEmail("");
