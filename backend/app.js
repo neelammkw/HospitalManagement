@@ -11,23 +11,31 @@ import { errorMiddleware } from "./middlewares/error.js";
 
 const app = express();
 config({ path: "./config/config.env" });
-const allowedOrigins = ['https://hospital-management-admin.netlify.app', 'https://hospital-management-patient.netlify.app'];
-app.use((req, res, next) => {
-  
-  const origin = req.headers.origin;
 
+const allowedOrigins = ['https://hospital-management-admin.netlify.app', 'https://hospital-management-patient.netlify.app'];
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
-
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
 });
 
-
-app.options('*', cors());
+// CORS preflight handling
+app.options('*', (req, res) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.status(200).end();
+});
 
 app.use(cookieParser());
 app.use(express.json());
@@ -45,4 +53,5 @@ app.use("/api/v1/appointment", appoinmentRouter);
 dbConnection();
 
 app.use(errorMiddleware);
+
 export default app;
